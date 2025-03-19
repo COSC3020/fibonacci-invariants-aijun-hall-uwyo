@@ -33,11 +33,7 @@ your answer to this markdown file.
 An invariant for my recursive implementation of `fib()` could be that every single element `n` in
 the computed array `prev_fib_array` should be larger than the `n` element before it AFTER index 2. In other words, all elements in `prev_fib_array` should always be sorted in order from least at index 0, to largest at index -1.
 
-In the above table, after index 2, all values are sorted in order ascending to the right.
-Therefore at the current recursive call, if we get an array that is not sorted, and has elements
-out of order such as `[0, 1, 1, 3, 2]` then something is incorrect. We know the function is correctly
-executing within the recursive iterations, and at the end when the recursion is done, partially by
-the fact that the elements are in ascending sorted order.
+However simply observing the values are in ascending order does not fully prove correctness. What truly matters is that each new `fib(n)` is the correctly calculated sum value of the two immediately preceding values, `fib(n-1)` and `fib(n-2)`. Checking for ascending order helps detect obvious errors, such as if a later fibonacci number somehow ends up smaller than a previous one, but to confirm every computed value of `fib(n)` is correct, we also rely on the fact that every element in `prev_fib_array` is derived by adding the two previous elements.
 
 Referenced geeksforgeeks' website on fibonacci recursion: https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/#naive-approach-using-recursion-o2n-time-and-on-space
 
