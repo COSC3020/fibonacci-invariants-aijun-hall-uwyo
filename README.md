@@ -27,3 +27,13 @@ about the current recursive call.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
+
+## Aijun Hall
+
+An invariant for my recursive implementation of `fib()` could be that each new `fib(n)` is the correctly calculated sum value of the two immediately preceding values, `fib(n-1)` and `fib(n-2)`. To confirm every computed value of `fib(n)` is correct, we also rely on the fact that every element in `prev_fib_array` is derived by adding the two previous elements.
+
+Referenced geeksforgeeks' website on fibonacci recursion: https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/#naive-approach-using-recursion-o2n-time-and-on-space
+
+"I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice."
+
+
