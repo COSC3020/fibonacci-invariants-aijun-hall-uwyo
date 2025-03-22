@@ -30,7 +30,12 @@ your answer to this markdown file.
 
 ## Aijun Hall
 
-An invariant for my recursive implementation of `fib()` could be that each new `fib(n)` is the correctly calculated sum value of the two immediately preceding values, `fib(n-1)` and `fib(n-2)`. To confirm every computed value of `fib(n)` is correct, we also rely on the fact that every element in `prev_fib_array` is derived by adding the two previous elements.
+An invariant for my recursive implementation of `fib()` could be that `current_fib_value` is the correctly calculated sum value of `last_fib_array_value` and `next_fib_array_value`. The calculation of
+```
+const current_fib_value = last_fib_array_value + second_last_fib_array_value;
+```
+
+happens at the current iteration of `fib()`
 
 Referenced geeksforgeeks' website on fibonacci recursion: https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/#naive-approach-using-recursion-o2n-time-and-on-space
 
